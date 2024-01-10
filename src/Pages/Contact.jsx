@@ -13,8 +13,6 @@ const Contact = () => {
     const name = e.target.name;
     const value = e.target.value;
 
-    console.log(name);
-    console.log(value);
 
     setData((previousValue) => {
       return {
@@ -31,10 +29,10 @@ const Contact = () => {
           Contact <span style={{ color: "#0ef" }}>Us</span>{" "}
         </h1>
         <div className="contact-grid">
-          <p>{data.Fullname} </p>
+          {/* <p>{data.Fullname} </p>
           <p>{data.Password} </p>
           <p>{data.Email} </p>
-          <p>{data.Mobile} </p>
+          <p>{data.Mobile} </p> */}
 
           <div className="contact-left">
             <input
