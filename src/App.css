@@ -4,15 +4,15 @@
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar{
   width: 1.8rem;
 }
 
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-track{
   background-color: var(--second-bg-color);
 }
 
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb{
   background-color: var(--main-color);
   -o-border-radius: 1rem;
   border-radius: 1rem;
@@ -20,7 +20,7 @@
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
 
-  border: 0.5rem solid transparent;
+  border: .5rem solid transparent;
   -webkit-background-clip: content-box;
 }
 
@@ -59,11 +59,11 @@ section {
 
 /* Header start */
 
-header {
+header{
   /* position: fixed; */
   left: 0;
   right: 0;
-  background-color: rgba(31, 36, 45, 0.541);
+  background-color:rgba(31, 36, 45, 0.541);
   z-index: 99999;
 }
 
@@ -92,7 +92,7 @@ nav {
         transition: all 0.3s;
       }
 
-      & a:hover {
+      & a:hover{
         color: var(--main-color);
       }
     }
@@ -204,26 +204,26 @@ nav {
   }
 }
 
-.up-arrow {
-  position: fixed;
-  left: 48.7%;
-  bottom: 1%;
-  z-index: 999999;
-  background-color: var(--main-color);
-  height: 3.8rem;
-  width: 3.8rem;
-  text-align: center;
-  padding: 0.5rem;
-  color: var(--bg-color);
-  font-size: 2.4rem;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+.up-arrow{
+ position: fixed;
+ left: 48.7%;
+ bottom: 1%;
+ z-index: 999999;
+ background-color: var(--main-color);
+ height: 3.8rem;
+ width: 3.8rem;
+ text-align: center;
+ padding: .5rem;
+ color: var(--bg-color);
+ font-size: 2.4rem;
+ border-radius: 50%;
+ -webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+ -ms-border-radius: 50%;
+ -o-border-radius: 50%;
 }
 
-.up-arrow:hover {
+.up-arrow:hover{
   transform: scale(1.2);
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
@@ -266,10 +266,11 @@ nav {
 
 /* Skills-section-start */
 
-.skill-section {
+.skill-section{
   background-color: var(--second-bg-color);
-  /* padding: 4rem; */
+  padding: 4rem;
 
+   
   & h1 {
     font-size: 3.2rem;
     text-align: center;
@@ -362,13 +363,12 @@ nav {
   background-color: var(--second-bg-color);
   padding: 4rem;
 
-  & .contact-heading {
+  & .contact-heading{
     font-size: 3.2rem;
     text-align: center;
   }
 
-  & input,
-  textarea {
+  & input,textarea {
     height: 8rem;
     width: 28rem;
     font-size: 1.5rem;
@@ -377,7 +377,7 @@ nav {
     border: none;
     padding: 1.5rem;
     color: var(--text-color);
-
+    
     -o-border-radius: 1rem;
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
@@ -385,35 +385,34 @@ nav {
     -ms-border-radius: 1rem;
   }
 
-  & input:hover,
-  textarea:hover {
-    border: 0.2rem solid var(--text-color);
+  & input:hover,textarea:hover{
+    border: .2rem solid var(--text-color);
   }
 
-  & textarea {
+  & textarea{
     height: auto;
     width: 57rem;
   }
 }
 
-.contact-left {
+.contact-left{
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-.contact-right {
+.contact-right{
   display: flex;
   flex-direction: column;
 }
 
-.contact-grid {
+.contact-grid{
   margin-top: 5rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2,1fr);
   gap: 1rem;
 }
 
-.contact-bottom {
+.contact-bottom{
   display: flex;
   flex-direction: column;
   align-items: center;
