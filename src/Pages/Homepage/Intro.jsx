@@ -21,7 +21,7 @@ const Intro = () => {
             Non, eaque ad?
           </p>
           <div className="social-media">
-            <a href="https://github.com/dashboard" target="blank">
+            <a href="https://github.com/suysah" target="blank">
               <i className="fa-brands social-icon fa-github"></i>
             </a>
             <a href="https://www.linkedin.com/feed/" target="blank">
