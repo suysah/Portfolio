@@ -1,79 +1,55 @@
-import React from "react";
-import { useState } from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const [data, setData] = useState({
-    Fullname: "",
-    Password: "",
-    Email: "",
-    Mobile: "",
-  });
+  const form = useRef();
 
-  const handleChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-
-    setData((previousValue) => {
-      return {
-        ...previousValue,
-        [name]: value,
-      };
-    });
+    emailjs
+      .sendForm("service_o2tahih", "template_sbubebn", form.current, {
+        publicKey: "E8bdsLF2KmXty7WOd",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          form.current.reset(); // Clear the form fields after sending
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
   };
 
   return (
-   
-      <section className="contact" id="contact">
-        <h1 className="contact-heading">
-          Contact <span style={{ color: "#0ef" }}>Us</span>{" "}
-        </h1>
+    <section className="contact" id="contact">
+      <h1 className="contact-heading">
+        Contact <span style={{ color: "#0ef" }}>Us</span>{" "}
+      </h1>
+      <form ref={form} onSubmit={sendEmail}>
         <div className="contact-grid">
-          {/* <p>{data.Fullname} </p>
-          <p>{data.Password} </p>
-          <p>{data.Email} </p>
-          <p>{data.Mobile} </p> */}
-
           <div className="contact-left">
-            <input
-              type="text"
-              placeholder="Fullname"
-              name="Fullname"
-              onChange={handleChange}
-              value={data.Fullname}
-            />
-            <input
-              type="text"
-              placeholder="Password"
-              name="Password"
-              onChange={handleChange}
-              value={data.Password}
-            />
+            <input type="text" placeholder="Fullname" name="user_name" />
           </div>
           <div className="contact-right">
-            <input
-              type="text"
-              placeholder="Email"
-              name="Email"
-              onChange={handleChange}
-              value={data.Email}
-            />
-            <input
-              type="text"
-              placeholder="Mobile no"
-              name="Mobile"
-              onChange={handleChange}
-              value={data.Mobile}
-            />
+            <input type="email" placeholder="Your Email" name="user_email" />
           </div>
         </div>
 
-        <div className="contact-bottom" >
-          <textarea name="text" id="" cols="30" rows="10" placeholder="message" ></textarea>
-          <button className="btn">Send message</button>
+        <div className="contact-bottom">
+          <textarea
+            name="message"
+            cols="30"
+            rows="10"
+            placeholder="message"
+          ></textarea>
+          <button className="btn" type="submit" value="send">
+            Send message
+          </button>
         </div>
-      </section>
-   
+      </form>
+    </section>
   );
 };
 

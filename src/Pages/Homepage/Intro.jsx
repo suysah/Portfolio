@@ -3,7 +3,6 @@ import Header from "./Header";
 import { NavHashLink } from "react-router-hash-link";
 
 const Intro = () => {
-
   return (
     <section id="top">
       <Header />
@@ -15,10 +14,12 @@ const Intro = () => {
             And I'am a <span style={{ color: "#0ef" }}>Frontend Developer</span>{" "}
           </h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsam
-            nihil soluta atque ipsum, quas magni commodi laboriosam quasi,
-            perferendis sint, dolorum tempore adipisci porro ullam asperiores?
-            Non, eaque ad?
+            I’m passionate about creating engaging, intuitive, and responsive
+            web experiences. With expertise in HTML, CSS, JavaScript, and modern
+            frameworks like React, I build clean, efficient code that brings
+            ideas to life on the web. My focus is on optimizing user interfaces
+            for seamless performance across devices and ensuring every project
+            is both functional and visually appealing.
           </p>
           <div className="social-media">
             <a href="https://github.com/suysah" target="blank">
@@ -38,7 +39,7 @@ const Intro = () => {
           <div className="cv-btn">
             <a
               target="blank"
-              href="https://drive.google.com/file/d/1fP8VYEsMd_ZEsL6WeCV8fQTJ5HG-rfHC/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1vPaUC-biQiMunn-ovM2aE78XeIOR1cRX/view?usp=sharing"
             >
               <button className="btn">Download CV</button>
             </a>
@@ -48,9 +49,9 @@ const Intro = () => {
           <img src="./Images/main-hero.png" alt="Author-looks" />
         </div>
       </div>
-      <div>
-        <NavHashLink to="#top" smooth >
-          <button className="up-arrow" >
+      <div className="up-arrow-div">
+        <NavHashLink to="#top" smooth>
+          <button className="up-arrow">
             <i class="fa-solid fa-arrow-up"></i>
           </button>
         </NavHashLink>
