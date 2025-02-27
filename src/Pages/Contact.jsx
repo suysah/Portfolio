@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { toast, ToastContainer } from "react-toastify";
 
 const Contact = () => {
   const form = useRef();
@@ -14,9 +15,11 @@ const Contact = () => {
       .then(
         () => {
           console.log("SUCCESS!");
+          toast("Email sent successfully🎉");
           form.current.reset(); // Clear the form fields after sending
         },
         (error) => {
+          toast("Something went wrong plese try again");
           console.log("FAILED...", error.text);
         }
       );
@@ -25,8 +28,9 @@ const Contact = () => {
   return (
     <section className="contact" id="contact">
       <h1 className="contact-heading">
-        Contact <span style={{ color: "#0ef" }}>Us</span>{" "}
+        Connect with <span style={{ color: "#0ef" }}>Me</span>{" "}
       </h1>
+      <ToastContainer />
       <form ref={form} onSubmit={sendEmail}>
         <div className="contact-grid">
           <div className="contact-left">

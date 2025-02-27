@@ -62,7 +62,7 @@ header {
   left: 0;
   right: 0;
   background-color: rgba(31, 36, 45, 0.541);
-  z-index: 99999;
+  /* z-index: 99999; */
 }
 
 nav {

@@ -11,15 +11,18 @@ const Intro = () => {
           <h2>Hello, It's Me</h2>
           <h1>Suyash Nagar</h1>
           <h2>
-            And I'am a <span style={{ color: "#0ef" }}>Frontend Developer</span>{" "}
+            And I'am a{" "}
+            <span style={{ color: "#0ef" }}>Full Stack Developer</span>{" "}
           </h2>
           <p>
-            I’m passionate about creating engaging, intuitive, and responsive
-            web experiences. With expertise in HTML, CSS, JavaScript, and modern
-            frameworks like React, I build clean, efficient code that brings
-            ideas to life on the web. My focus is on optimizing user interfaces
-            for seamless performance across devices and ensuring every project
-            is both functional and visually appealing.
+            I'm passionate about building scalable, efficient, and user-friendly
+            web applications. With expertise in MongoDB, Express.js, React, and
+            Node.js (MERN stack), I develop clean, maintainable code that powers
+            both the frontend and backend seamlessly. My focus is on creating
+            intuitive user experiences, optimizing performance, and ensuring
+            applications are responsive across all devices. I love solving
+            complex problems, integrating modern technologies, and bringing
+            ideas to life through full-stack development.
           </p>
           <div className="social-media">
             <a href="https://github.com/suysah" target="blank">
@@ -28,12 +31,12 @@ const Intro = () => {
             <a href="https://www.linkedin.com/feed/" target="blank">
               <i className="fa-brands social-icon  fa-linkedin"></i>
             </a>
-            <a>
+            {/* <a  >
               <i className="fa-brands social-icon fa-whatsapp"></i>
             </a>
             <a>
               <i className="fa-brands social-icon fa-instagram"></i>
-            </a>
+            </a> */}
           </div>
 
           <div className="cv-btn">
